@@ -12,4 +12,7 @@ end
 
 #show by id
 
-get '/music/albums/:id'
+get '/music/albums/:id' do
+  @album = Album.find( params[:id] )
+  erb(:"album/show")
+end
