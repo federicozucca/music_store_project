@@ -9,3 +9,7 @@ get '/music/albums' do
   @albums  = Album.all
   erb(:"album/index")
 end
+
+#show by id
+
+get '/music/albums/:id'
