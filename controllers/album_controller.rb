@@ -10,14 +10,26 @@ get '/music/albums' do
   erb(:"albums/index")
 end
 
+ #add an album
+get '/music/albums/new' do
+  @albums  = Album.all
+  erb(:"albums/new")
+end
+
+#create a new album
+
+post '/music/albums' do
+  album = Album.new(params)
+  album.save
+  redirect to("/music/albums")
+end
+
 #show by id
 
 get '/music/albums/:id' do
   @album = Album.find( params[:id] )
   erb(:"albums/show")
 end
+ 
 
-get '/music/albums/new' do
-@album = Album.new(params)
-erb(:"albums/new")
-  end
+
