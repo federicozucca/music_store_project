@@ -1,1 +1,12 @@
-ciaossadasda
+<h1> Album Details </h1>
+<p>Title: <%= @album.title %></p>
+<p>Artist: <%= @album.artist.name %></p>
+<p>Genre: <%= @album.genre %></p>
+<p>Price: <%= @album.price %></p>
+  <p>
+    <a href="/music/albums/<%= @album.id %>/edit">Edit</a>
+    </p>
+    
+<form action = "/music/album/<%= @album.id %>/delete" method = "post">
+<input type = "submit" value = "Delete" />
+</form>
