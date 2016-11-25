@@ -1,1 +1,12 @@
-<h1>Ciao</h1>
+<h1>Inventory</h1>
+
+<% for album  in @albums %>
+<p>Title: <%= album.title()  %></p>
+<p>Artist: <%= album.artist.name()  %></p>
+<p>Genre: <%= album.genre()  %></p>
+<p>Price: <%= album.price()  %></p>
+
+<hr/>
+
+<%end%>
+
