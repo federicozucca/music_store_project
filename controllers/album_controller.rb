@@ -7,12 +7,17 @@ require_relative( '../models/artist.rb' )
 #all album
 get '/music/albums' do
   @albums  = Album.all
-  erb(:"album/index")
+  erb(:"albums/index")
 end
 
 #show by id
 
 get '/music/albums/:id' do
   @album = Album.find( params[:id] )
-  erb(:"album/show")
+  erb(:"albums/show")
 end
+
+get '/music/albums/new' do
+@album = Album.new(params)
+erb(:"albums/new")
+  end
