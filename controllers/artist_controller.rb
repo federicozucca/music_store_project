@@ -7,8 +7,6 @@ require_relative( '../models/album.rb' )
 #all artist
 get '/music/artist' do
   @artist = Artist.all
-  if @artist[0] != nil
-    erb(:"artist/index)
-  end
+  erb(:"artist/index")
 end
 
