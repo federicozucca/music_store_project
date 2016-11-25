@@ -1,6 +1,7 @@
 require('pg')
 require('pry-byebug')
 require_relative('../db/sql_runner')
+require_relative('album')
 
 class Artist
   attr_accessor :name
@@ -33,15 +34,25 @@ class Artist
   def self.delete_all
     sql = "DELETE FROM artists;"
     artists = SqlRunner.run( sql )
-    return artists.map { |hash| Artist.new(hash) }
+    return artists.map { |artist| Artist.new(artist) }
   end
 
- def self.all
+  def self.all
    sql = "SELECT * FROM artists;"
    artists = SqlRunner.run( sql )
-   return artists.map { |hash| Artist.new(hash) }
- end
+   return artists.map { |artist| Artist.new(artist) }
+  end
 
+  def show_all
+   sql = "SELECT * FROM artists;"
+   artists = SqlRunner.run( sql )
+   return artists.map { |artist| Artist.new(artist) }
+  end
 
+  def albums
+    sql = "SELECT * from albums where artist_id=#{@id};"
+    albums = SqlRunner.run( sql )
+    return albums.map {|album| Album.new(album)}
+  end
 
 end

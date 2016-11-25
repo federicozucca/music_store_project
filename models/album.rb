@@ -1,5 +1,6 @@
 require('pg')
 require_relative('../db/sql_runner')
+require_relative('artist')
 
 class Album
   attr_accessor :title, :genre, :artist_id, :price 
@@ -43,6 +44,8 @@ class Album
     puts first_artist_hash
     return Artist.new(first_artist_hash)
   end
+
+
 
 
 
