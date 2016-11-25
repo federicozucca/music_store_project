@@ -147,16 +147,19 @@ album11 = Album.new({
   'price' => 20
   })
 
-album11.save
-
+album11.save 
 
 album12 = Album.new({
   'title' => 'Like a prayer',
-  'genre' => 'rock',
+  'genre' => 'pop',
   'artist_id' => artist7.id,
   'price' => 20
-  })
+  }
+  )
 
 album12.save
+
+binding.pry
+nil
 
 

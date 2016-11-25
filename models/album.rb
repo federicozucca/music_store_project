@@ -33,16 +33,17 @@ class Album
 
 
   def self.delete_all
-    sql = "DELETE FROM albums;"
-    albums = SqlRunner.run( sql )
-    return albums.map { |hash| Album.new(hash) }
+    sql = "DELETE FROM albums"
+    SqlRunner.run(sql)
   end
 
-  def self.all
-   sql = "SELECT * FROM albums;"
-   albums = SqlRunner.run( sql )
-   return albums.map { |hash| Album.new(hash) }
- end
+  def artist
+    sql = "SELECT * FROM artists WHERE id=#{@artist_id}"
+    first_artist_hash = SqlRunner.run(sql).first
+    puts first_artist_hash
+    return Artist.new(first_artist_hash)
+  end
+
 
 
 
