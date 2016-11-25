@@ -36,6 +36,11 @@ artist6 = Artist.new({
 
 artist6.save
 
+artist7 = Artist.new({
+  'name' => "Madonna"})
+
+artist7.save
+
 album1 = Album.new({
   'title' => 'back in black',
   'genre' => 'rock',
@@ -98,4 +103,60 @@ album6 = Album.new({
   })
 
 album6.save
+
+album7 = Album.new({
+  'title' => 'Help!',
+  'genre' => 'rock',
+  'artist_id' => artist5.id,
+  'price' => 20
+  })
+
+album7.save
+
+album8 = Album.new({
+  'title' => 'The Beatles',
+  'genre' => 'rock',
+  'artist_id' => artist5.id,
+  'price' => 20
+  })
+
+album8.save
+
+album9 = Album.new({
+  'title' => 'Abbey Road',
+  'genre' => 'rock',
+  'artist_id' => artist5.id,
+  'price' => 20
+  })
+
+album9.save
+
+album10 = Album.new({
+  'title' => 'The Offspring',
+  'genre' => 'rock',
+  'artist_id' => artist3.id,
+  'price' => 20
+  })
+
+album10.save
+
+album11 = Album.new({
+  'title' => 'Like a virgin',
+  'genre' => 'pop',
+  'artist_id' => artist7.id,
+  'price' => 20
+  })
+
+album11.save
+
+
+album12 = Album.new({
+  'title' => 'Like a prayer',
+  'genre' => 'rock',
+  'artist_id' => artist7.id,
+  'price' => 20
+  })
+
+album12.save
+
 
