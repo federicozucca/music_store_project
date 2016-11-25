@@ -62,3 +62,40 @@ album3 = Album.new({
   })
 
 album3.save
+
+album4 = Album.new({
+  'title' => 'All Killer No Filler',
+  'genre' => 'punk',
+  'artist_id' => artist2.id,
+  'price' => 20
+  })
+
+album4.save
+
+album5 = Album.new({
+  'title' => 'G N R Lies',
+  'genre' => 'rock',
+  'artist_id' => artist6.id,
+  'price' => 20
+  })
+
+album5.save
+
+album6 = Album.new({
+  'title' => 'Californication',
+  'genre' => 'rock',
+  'artist_id' => artist4.id,
+  'price' => 20
+  })
+
+album6.save
+
+album6 = Album.new({
+  'title' => 'By the Way',
+  'genre' => 'rock',
+  'artist_id' => artist4.id,
+  'price' => 20
+  })
+
+album6.save
+
