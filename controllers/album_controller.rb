@@ -47,7 +47,7 @@ end
  #update the album edited
  post '/music/albums/:id' do
  Album.update( params )
- redirect to("/albums/#{params[:id]}")
+ redirect to("/music/albums/#{params[:id]}")
  end
 
 

@@ -1,0 +1,13 @@
+<h1>Update an ARTIST</h1>
+
+<form action="/music/artists/<%= @artist.id %>" method="post">
+<p>
+  <label>
+    Name: 
+    <input type="text"  name="name" value = "<%= @album.name %>"/>
+  </label>
+</p>
+
+  <input type="submit" value="Update"/>
+
+</form>
