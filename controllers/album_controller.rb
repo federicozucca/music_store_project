@@ -30,6 +30,12 @@ get '/music/albums/:id' do
   @album = Album.find( params[:id] )
   erb(:"albums/show")
 end
+
+#delete an album
+post '/music/albums/:id/delete' do
+  Album.delete(params[:id])
+  redirect to('/music/albums')
+end
  
 
 
