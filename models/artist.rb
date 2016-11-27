@@ -1,5 +1,4 @@
 require('pg')
-require('pry-byebug')
 require_relative('../db/sql_runner')
 require_relative('album')
 
@@ -26,7 +25,9 @@ class Artist
   end
 
   def self.update (options)
-    sql = "UPDATE artists SET (name) = ('#{@name}') WHERE id = (#{@id})"
+   sql = "UPDATE albums SET
+         name='#{options['name']}'
+         WHERE id=#{options['id']}"
     result = SqlRunner.run( sql )
   end
 
@@ -35,6 +36,11 @@ class Artist
     sql = "DELETE FROM artists;"
     artists = SqlRunner.run( sql )
     return artists.map { |artist| Artist.new(artist) }
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM artists WHERE id=#{id}"
+    SqlRunner.run(sql)
   end
 
   def self.all
@@ -53,7 +59,7 @@ class Artist
 
     sql = "SELECT * FROM artists WHERE id=#{id}"
     artist = SqlRunner.run(sql).first
-    return Album.new(artist)
+    return Artist.new(artist)
   end
 
 end
