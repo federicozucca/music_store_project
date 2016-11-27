@@ -1,0 +1,33 @@
+<h1>Update an ALBUM</h1>
+
+<form action="/music/albums/<%= @album.id %>" method="post">
+<p>
+  <label>
+    Title: 
+    <input type="text"  name="title" value = "<%= @album.title %>"/>
+  </label>
+</p>
+
+
+<p>
+  <label>
+    Artist: 
+    <input type="number"  name="artist_id" value = "<%= @album.artist_id %>"/>
+  </label>
+</p>
+
+  <label>
+    Genre: 
+    <input type="text"  name="genre" value="<%= @album.genre %>"/>
+  </label>
+</p>
+<p>
+  <label>
+    Price: 
+    <input type="number"  name="price" value="<%= @album.price %>"/>
+  </label>
+</p>
+
+  <input type="submit" value="Update"/>
+
+</form>

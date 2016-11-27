@@ -37,5 +37,17 @@ post '/music/albums/:id/delete' do
   redirect to('/music/albums')
 end
  
+ #show the edit album form
+ get '/music/albums/:id/edit' do
+   @artist = Artist.all()
+   @album = Album.find( params[:id])
+ erb(:"albums/edit")
+ end
+
+ #update the album edited
+ post '/music/albums/:id' do
+ Album.update( params )
+ redirect to("/albums/#{params[:id]}")
+ end
 
 
