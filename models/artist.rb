@@ -25,7 +25,7 @@ class Artist
   end
 
   def self.update (options)
-   sql = "UPDATE albums SET
+   sql = "UPDATE artists SET
          name='#{options['name']}'
          WHERE id=#{options['id']}"
     result = SqlRunner.run( sql )

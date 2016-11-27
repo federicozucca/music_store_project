@@ -17,7 +17,7 @@ get '/music/artists/new' do
   erb(:"artists/new")
 end
 
-#create a new album
+#create a new artist
 
 post '/music/artists' do
   artist = Artist.new(params)
@@ -32,19 +32,19 @@ get '/music/artists/:id' do
   erb(:"artists/show")
 end
 
-#delete an album
+#delete an artist
 post '/music/artists/:id/delete' do
   Artist.delete(params[:id])
   redirect to('/music/artists')
 end
  
- #show the edit album form
+ #show the edit artist form
  get '/music/artists/:id/edit' do
    @artist = Artist.find( params[:id])
- erb(:"albums/edit")
+ erb(:"artists/edit")
  end
 
- #update the album edited
+ #update the artist edited
  post '/music/artists/:id' do
  Artist.update( params )
  redirect to("/music/artists/#{params[:id]}")
