@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Music Store</title>
+
+
+  <link rel="icon" href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRiIZRC0Zu9naV2VWRnXIfyNN4xpXji5t5dMP0Xl_-zjwZSFw-pjVBwUCxBtQ" />
+
+  <link rel="stylesheet" type = "text/css" href="/style.css"
+
+</head>
+<body>
+<main class="flex flex--start">
+  <nav>
+    <ul>
+    <li>
+      <a href="/music">Home Page</a>
+    </li>
+    <hr/>
+      <li>
+        <a href="/music/albums">go to inventory</a>
+      </li>
+      <li>
+        <a href="/music/artists">All the Artists</a>
+      </li>
+      <hr/>
+      <li>
+        <a href="/music/albums/new">Add a NEW Album</a>
+      </li>
+      <li>
+        <a href="/music/artists/new">Add a NEW Artist</a>
+      </li>
+    </ul>
+  </nav>
+  <section id="content">
+  <%= yield %>
+  </section>
+  </main>
+</body>
+</html>

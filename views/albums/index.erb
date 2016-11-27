@@ -1,22 +1,4 @@
-<form action="/music" method="get">
-<input type="submit" value="Home Page" />
-</form>
-<hr/>
-<hr/>
-
 <h1>Inventory</h1>
-<hr/>
-<hr/>
-<p>
-<form action="/music/albums/new" method="get">
-<input type="submit" value="Add a new album" />
-</form>
-<form action="/music/artists/new" method="get">
-<input type="submit" value="Add a new artist" />
-</form>
-</p>
-<hr/>
-<hr/>
 
 <% for album in @albums %>
 <p>Title: <%= album.title()  %></p>

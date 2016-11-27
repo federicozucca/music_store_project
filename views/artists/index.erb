@@ -1,17 +1,4 @@
 <h1>Artists present in our inventory</h1>
-<hr/>
-<hr/>
-<p>
-<form action="/music/albums/new" method="get">
-<input type="submit" value="Add a new album" />
-</form>
-<form action="/music/artists/new" method="get">
-<input type="submit" value="Add a new artist" />
-</form>
-</p>
-<hr/>
-<hr/>
-
 
 <% for artist in @artists %>
 <p>Name: <%= artist.name()  %></p>
