@@ -13,10 +13,16 @@
 <hr/>
 
 
+<% for artist in @artists %>
 <p>Name: <%= artist.name()  %></p>
 
+<form action="/music/artists/<%= artist.id  %>" method="get">
+<input type="submit" value="Show details" />
+</form>
 <hr/>
 
+
+<%end%>
 
 
 

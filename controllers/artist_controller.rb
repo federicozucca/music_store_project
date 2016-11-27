@@ -6,7 +6,7 @@ require_relative( '../models/album.rb' )
 
 #all artist
 get '/music/artists' do
-  @artist = Artist.all
+  @artists = Artist.all
   erb(:"artists/index")
 end
 

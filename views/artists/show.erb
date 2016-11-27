@@ -5,11 +5,11 @@
 <hr/>
 
 <h1> Artist Details </h1>
-<p>Name: <%= @album.name %></p>
+<p>Name: <%= @artist.name()  %></p>
 
-    <a href="/music/albums/<%= @album.id %>/edit">Edit</a>
+    <a href="/music/artists/<%= @artist.id %>/edit">Edit</a>
     </p>
     
-<form action = "/music/albums/<%= @album.id %>/delete" method = "post">
+<form action = "/music/artists/<%= @artist.id %>/delete" method = "post">
 <input type = "submit" value = "Delete" />
 </form>
