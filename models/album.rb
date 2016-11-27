@@ -11,7 +11,7 @@ class Album
     @title = options['title']
     @genre = options['genre']
     @id = options['id'].to_i if options['id']
-    @artist_id = options['artist_id'].to_i 
+    @artist_id = options['artist_id']
     @price = options['price'].to_i
   end
 
