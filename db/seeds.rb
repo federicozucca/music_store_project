@@ -79,7 +79,8 @@ album1 = Album.new({
   'title' => 'Back in black',
   'genre_id' => genre1.id,
   'artist_id' => artist1.id,
-  'price' => 30
+  'price' => 30,
+  'quantity' => 200
   })
 
 album1.save
@@ -88,7 +89,8 @@ album2 = Album.new({
   'title' => 'Live in Rio',
   'genre_id' => genre1.id,
   'artist_id' => artist1.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 100
   })
 
 album2.save
@@ -97,7 +99,8 @@ album3 = Album.new({
   'title' => 'G N R Lies',
   'genre_id' => genre1.id,
   'artist_id' => artist2.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 150
   })
 
 album3.save
@@ -106,7 +109,8 @@ album4 = Album.new({
   'title' => 'All Killer No Filler',
   'genre_id' => genre2.id,
   'artist_id' => artist2.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 20
   })
 
 album4.save
@@ -115,7 +119,8 @@ album5 = Album.new({
   'title' => 'G N R Lies',
   'genre_id' => genre1.id,
   'artist_id' => artist6.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 180
   })
 
 album5.save
@@ -124,7 +129,8 @@ album6 = Album.new({
   'title' => 'Californication',
   'genre_id' => genre1.id,
   'artist_id' => artist4.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 210
   })
 
 album6.save
@@ -133,7 +139,8 @@ album6 = Album.new({
   'title' => 'By the Way',
   'genre_id' => genre1.id,
   'artist_id' => artist4.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 180
   })
 
 album6.save
@@ -142,7 +149,8 @@ album7 = Album.new({
   'title' => 'Help!',
   'genre_id' => genre1.id,
   'artist_id' => artist5.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 300
   })
 
 album7.save
@@ -151,7 +159,8 @@ album8 = Album.new({
   'title' => 'The Beatles',
   'genre_id' => genre3.id,
   'artist_id' => artist5.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 500
   })
 
 album8.save
@@ -160,7 +169,8 @@ album9 = Album.new({
   'title' => 'Abbey Road',
   'genre_id' => genre3.id,
   'artist_id' => artist5.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 260
   })
 
 album9.save
@@ -169,7 +179,8 @@ album10 = Album.new({
   'title' => 'The Offspring',
   'genre_id' => genre1.id,
   'artist_id' => artist3.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 300
   })
 
 album10.save
@@ -178,7 +189,8 @@ album11 = Album.new({
   'title' => 'Like a virgin',
   'genre_id' => genre4.id,
   'artist_id' => artist7.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 100
   })
 
 album11.save 
@@ -187,7 +199,8 @@ album12 = Album.new({
   'title' => 'Like a prayer',
   'genre_id' => genre4.id,
   'artist_id' => artist7.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 80
   })
 
 album12.save
@@ -196,7 +209,8 @@ album13 = Album.new({
   'title' => 'Symphony 9',
   'genre_id' => genre5.id,
   'artist_id' => artist8.id,
-  'price' => 20
+  'price' => 20,
+  'quantity' => 210
   })
 
 album13.save
