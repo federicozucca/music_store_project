@@ -40,7 +40,9 @@ end
  
  #show the edit artist form
  get '/music/artists/:id/edit' do
-   @artist = Artist.find( params[:id])
+  @albums  = Album.all()
+  @genres = Genre.all()
+  @artist = Artist.find( params[:id])
  erb(:"artists/edit")
  end
 

@@ -1,5 +1,11 @@
 <h1> Artist Details </h1>
-<p>Name: <%= @artist.name()  %></p>
+<p>Name: <%= @artist.name  %></p>
+<p><% counter =0 %></p>
+<p><% while counter < @artist.albums.size do %></p>
+<p>Albums: <%= @artist.albums[counter].title %></p>
+<p><% counter += 1 %></p>
+<p><% end %></p>
+
 
     <a href="/music/artists/<%= @artist.id %>/edit">Edit</a>
     </p>

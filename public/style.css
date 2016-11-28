@@ -56,14 +56,19 @@ table {
   padding: 1em 1.5em 2em 1.5em}
 
 th {
-  border: solid white thin;
   padding: 0.5em 0 0.5em;
-  font-weight: bold;}
+  font-weight: bold;
+  background-color: #FFC;
+  border-top:1px solid #FB7A31;
+  border-bottom:1px solid #FB7A31;
+}
 
 td {
-  border: solid white thin;
-  padding: 0.3em 0 0.3em;
-  text-align: center;}
+
+  padding: 0.5em 0 0.5em;
+  text-align: center;
+border-top:1px solid #CCC;
+border-bottom:1px solid #CCC}
 
 
 
@@ -74,4 +79,48 @@ p {
     color: white;
     font-family: comic;
     font-size: 20px;
+}
+
+.btn {
+  background: #ff6f00;
+  background-image: -webkit-linear-gradient(top, #ff6f00, #ffe45c);
+  background-image: -moz-linear-gradient(top, #ff6f00, #ffe45c);
+  background-image: -ms-linear-gradient(top, #ff6f00, #ffe45c);
+  background-image: -o-linear-gradient(top, #ff6f00, #ffe45c);
+  background-image: linear-gradient(to bottom, #ff6f00, #ffe45c);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #00002e;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn {
+  background: #ff6f00;
+  background-image: -webkit-linear-gradient(top, #ff6f00, #ffe45c);
+  background-image: -moz-linear-gradient(top, #ff6f00, #ffe45c);
+  background-image: -ms-linear-gradient(top, #ff6f00, #ffe45c);
+  background-image: -o-linear-gradient(top, #ff6f00, #ffe45c);
+  background-image: linear-gradient(to bottom, #ff6f00, #ffe45c);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #00002e;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
 }
