@@ -17,12 +17,7 @@ class Album
     @quantity= options['quantity'].to_i
   end
 
-  def stock_level
-    return "low" if(@quantity <= 10 && @quantity > 0);
-    return "medium" if(@quantity > 10 && @quantity <= 100);
-    return "high" if(@quantity > 100);
-    return "out of stock" if(@quantity == 0)
-  end
+  
 
   def save()
     sql = "INSERT INTO albums (title, genre_id, artist_id, price, quantity) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}, #{@quantity}) returning *;"
@@ -80,6 +75,13 @@ class Album
     sql = "SELECT * FROM albums WHERE id=#{id}"
     album = SqlRunner.run(sql).first
     return Album.new(album)
+  end
+
+  def stock_level
+    return "low" if(@quantity <= 10 && @quantity > 0);
+    return "medium" if(@quantity > 10 && @quantity <= 100);
+    return "high" if(@quantity > 100);
+    return "out of stock" if(@quantity == 0)
   end
 
 
