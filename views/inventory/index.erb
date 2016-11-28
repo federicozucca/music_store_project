@@ -1,15 +1,15 @@
 <h1>All the Albums</h1>
-<hr/>
-<a href="/music/albums/new">Add a NEW Album</a>
-<hr/>
+
 <% for album in @albums %>
 <p>Title: <%= album.title()  %></p>
 <p>Artist: <%= album.artist.name %></p>
 <p>Genre: <%= album.genre.type %></p>
 <p>Price: <%= album.price()  %></p>
 <p>Quantity: <%= album.quantity()  %></p>
+<p class="<%= album.stock_level%>">Stock Level: <%= album.stock_level  %> </p>
+
+</p>
+
 <hr/>
-
-
 <%end%>
 

@@ -1,0 +1,13 @@
+<h1>Update a GENRE</h1>
+
+<form action="/music/genres/<%= @genre.id %>" method="post">
+<p>
+  <label>
+    Name: 
+    <input type="text"  name="name" value = "<%= @genre.name %>"/>
+  </label>
+</p>
+
+  <input type="submit" value="Update"/>
+
+</form>

@@ -1,0 +1,9 @@
+<h1> Genre Details </h1>
+<p>Type: <%= @genre.type()  %></p>
+
+    <a href="/music/genres/<%= @genre.id %>/edit">Edit</a>
+    </p>
+    
+<form action = "/music/genres/<%= @genre.id %>/delete" method = "post">
+<input type = "submit" value = "Delete" />
+</form>

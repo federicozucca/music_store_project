@@ -3,6 +3,19 @@ body {
 
 }
 
+.low {
+  color: red;
+}
+
+.medium {
+  color: purple;
+}
+
+.high {
+  color: green;
+}
+
+
 
 h1 {
     color: orange;

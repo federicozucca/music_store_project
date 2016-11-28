@@ -12,35 +12,35 @@ end
 
 #create a new artist
 
-post '/music/artists' do
-  artist = Artist.new(params)
-  artist.save
-  redirect to("/music/artists")
+post '/music/genres' do
+  genre = Genre.new(params)
+  genre.save
+  redirect to("/music/genres")
 end
 
 #show by id
 
-get '/music/artists/:id' do
-  @artist = Artist.find( params[:id] )
-  erb(:"artists/show")
+get '/music/genres/:id' do
+  @genre = Genre.find( params[:id] )
+  erb(:"genres/show")
 end
 
 #delete an artist
-post '/music/artists/:id/delete' do
-  Artist.delete(params[:id])
-  redirect to('/music/artists')
+post '/music/genres/:id/delete' do
+  genre.delete(params[:id])
+  redirect to('/music/genres')
 end
  
  #show the edit artist form
- get '/music/artists/:id/edit' do
-   @artist = Artist.find( params[:id])
- erb(:"artists/edit")
+ get '/music/genres/:id/edit' do
+   @genre = Genre.find( params[:id])
+ erb(:"genres/edit")
  end
 
  #update the artist edited
- post '/music/artists/:id' do
- Artist.update( params )
- redirect to("/music/artists/#{params[:id]}")
+ post '/music/genres/:id' do
+ Genre.update( params )
+ redirect to("/music/genres/#{params[:id]}")
  end
 
 
