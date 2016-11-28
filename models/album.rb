@@ -61,6 +61,12 @@ class Album
     return Artist.new(first_artist_hash)
   end
 
+  def genre
+    sql = "SELECT * FROM genres WHERE id=#{@genre_id}"
+    first_artist_hash = SqlRunner.run(sql).first
+    return Genre.new(first_artist_hash)
+  end
+
   def self.find (id)
 
     sql = "SELECT * FROM albums WHERE id=#{id}"

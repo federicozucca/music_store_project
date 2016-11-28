@@ -4,9 +4,6 @@ require( 'pry-byebug' )
 require_relative( '../models/artist.rb' )
 require_relative( '../models/album.rb' )
 
-
-
-
  #add a new genre
 get '/music/genres/new' do
   @genres  = Genre.all
