@@ -47,6 +47,29 @@ nav ul li {
   text-transform: uppercase;
 }
 
+table {
+  border-collapse: collapse;
+  width: 70%;
+  margin: auto;
+  color: orange;
+  background-color: #FFF
+  padding: 1em 1.5em 2em 1.5em}
+
+th {
+  border: solid white thin;
+  padding: 0.5em 0 0.5em;
+  font-weight: bold;}
+
+td {
+  border: solid white thin;
+  padding: 0.3em 0 0.3em;
+  text-align: center;}
+
+
+
+caption {font-size: 20px;
+  font-weight: bold;}
+
 p {
     color: white;
     font-family: comic;

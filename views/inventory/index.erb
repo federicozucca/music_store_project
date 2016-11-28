@@ -1,15 +1,28 @@
 <h1>All the Albums</h1>
 
+<table>
+<caption>Inventory</caption>
+
+<tr>
+  <th>Title</th>
+  <th>Artist</th>
+  <th>Genre</th>
+  <th>Price</th>
+  <th>Quantity</th>
+  <th>Stock Level</th>
+</tr>
+
 <% for album in @albums %>
-<p>Title: <%= album.title()  %></p>
-<p>Artist: <%= album.artist.name %></p>
-<p>Genre: <%= album.genre.type %></p>
-<p>Price: <%= album.price()  %></p>
-<p>Quantity: <%= album.quantity()  %></p>
-<p class="<%= album.stock_level.downcase %>">Stock Level: <%= album.stock_level  %> </p>
-
-</p>
-
-<hr/>
+<tr> 
+  <td><%= album.title()  %></td>
+  <td><%= album.artist.name %></td>
+  <td><%= album.genre.type %></td>
+  <td><%= album.price()  %></td>
+  <td><%= album.quantity()  %></td>
+  <td class="<%= album.stock_level.downcase %>">"<%= album.stock_level.downcase %>">Stock Level: <%= album.stock_level  %></td>
+  </tr>
 <%end%>
+  
+</table>
+
 
