@@ -7,9 +7,7 @@
 <p>Artist: <%= album.artist.name %></p>
 <p>Genre: <%= album.genre.type %></p>
 <p>Price: <%= album.price()  %></p>
-<form action="/music/albums/<%= album.id  %>" method="get">
-<input type="submit" value="Show details" />
-</form>
+<p>Quantity: <%= album.quantity()  %></p>
 <hr/>
 
 

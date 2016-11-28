@@ -4,7 +4,7 @@ require_relative('artist')
 require_relative('genre')
 
 class Album
-  attr_accessor :title, :genre_id, :artist_id, :price 
+  attr_accessor :title, :genre_id, :artist_id, :price, :quantity
 
   attr_reader :id
 
@@ -14,10 +14,11 @@ class Album
     @id = options['id'].to_i if options['id']
     @artist_id = options['artist_id']
     @price = options['price'].to_i
+    @quantity= options['quantity'].to_i
   end
 
   def save()
-    sql = "INSERT INTO albums (title, genre_id, artist_id, price) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}) returning *;"
+    sql = "INSERT INTO albums (title, genre_id, artist_id, price, quantity) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}, #{@quantity}) returning *;"
     result = SqlRunner.run( sql )
     @id = result[0]['id'].to_i
   end
@@ -34,6 +35,7 @@ class Album
           genre_id='#{options['genre_id']}',
           artist_id='#{options['artist_id']}',
           price=#{options['price']}
+          quantity=#{options['quantity']}
           WHERE id=#{options['id']}"
     result = SqlRunner.run( sql )
   end

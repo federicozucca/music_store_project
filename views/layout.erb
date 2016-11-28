@@ -12,25 +12,12 @@
 <body>
 <main class="flex flex--start">
   <nav>
-    <ul>
     <li>
       <a href="/music">Home Page</a>
+      <a href="/music/inventory">INVENTORY</a>
+      <a href="/music/albums">All the Albums</a>
+      <a href="/music/artists">All the Artists</a>
     </li>
-    <hr/>
-      <li>
-        <a href="/music/albums">go to inventory</a>
-      </li>
-      <li>
-        <a href="/music/artists">All the Artists</a>
-      </li>
-      <hr/>
-      <li>
-        <a href="/music/albums/new">Add a NEW Album</a>
-      </li>
-      <li>
-        <a href="/music/artists/new">Add a NEW Artist</a>
-      </li>
-    </ul>
   </nav>
   <section id="content">
   <%= yield %>
