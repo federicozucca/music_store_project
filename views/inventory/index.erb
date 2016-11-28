@@ -6,7 +6,7 @@
 <p>Genre: <%= album.genre.type %></p>
 <p>Price: <%= album.price()  %></p>
 <p>Quantity: <%= album.quantity()  %></p>
-<p class="<%= album.stock_level%>">Stock Level: <%= album.stock_level  %> </p>
+<p class="<%= album.stock_level.downcase %>">Stock Level: <%= album.stock_level  %> </p>
 
 </p>
 

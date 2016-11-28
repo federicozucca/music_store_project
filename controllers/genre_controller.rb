@@ -4,13 +4,19 @@ require( 'pry-byebug' )
 require_relative( '../models/artist.rb' )
 require_relative( '../models/album.rb' )
 
+#all the genres
+get '/music/genres' do
+  @genres = Genre.all
+  erb(:"genres/index")
+end
+
  #add a new genre
 get '/music/genres/new' do
   @genres  = Genre.all
   erb(:"genres/new")
 end
 
-#create a new artist
+#create a new type of genre
 
 post '/music/genres' do
   genre = Genre.new(params)
@@ -27,7 +33,7 @@ end
 
 #delete an artist
 post '/music/genres/:id/delete' do
-  genre.delete(params[:id])
+  Genre.delete(params[:id])
   redirect to('/music/genres')
 end
  
