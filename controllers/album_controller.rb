@@ -12,6 +12,7 @@ end
 
  #add an album
 get '/music/albums/new' do
+  @artists = Artist.all
   @albums  = Album.all
   erb(:"albums/new")
 end
