@@ -15,7 +15,7 @@
 <% for album in @albums %>
 <tr> 
   <td><%= album.title()  %></td>
-  <td><%= album.artist.name %></td>
+  <td><a href="/music/artists/<%= album.artist_id  %>"><%=album.artist.name %></a></td>
   <td><%= album.genre.type %></td>
   <td><%= album.price()  %></td>
   <td><%= album.quantity()  %></td>

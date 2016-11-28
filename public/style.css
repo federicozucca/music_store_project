@@ -93,23 +93,6 @@ p {
   border-radius: 28px;
   font-family: Arial;
   color: #00002e;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
-
-.btn {
-  background: #ff6f00;
-  background-image: -webkit-linear-gradient(top, #ff6f00, #ffe45c);
-  background-image: -moz-linear-gradient(top, #ff6f00, #ffe45c);
-  background-image: -ms-linear-gradient(top, #ff6f00, #ffe45c);
-  background-image: -o-linear-gradient(top, #ff6f00, #ffe45c);
-  background-image: linear-gradient(to bottom, #ff6f00, #ffe45c);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial;
-  color: #00002e;
   font-size: 14px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;

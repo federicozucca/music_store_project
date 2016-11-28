@@ -7,7 +7,8 @@ require_relative( '../models/genre.rb' )
 
 #all stock
 get '/music/inventory' do
-  @genres = Genre.all
-  @albums  = Album.all
+  @artists = Artist.all()
+  @genres = Genre.all()
+  @albums  = Album.all()
   erb(:"inventory/index")
 end
