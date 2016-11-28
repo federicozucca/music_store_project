@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS albums;
-DROP TABLE IF EXISTS genre;
+DROP TABLE IF EXISTS genres;
 DROP TABLE IF EXISTS artists;
 
 
@@ -8,16 +8,15 @@ CREATE TABLE artists (
   name VARCHAR(255) NOT NULL
   );
 
-CREATE TABLE genre (
+CREATE TABLE genres (
   id SERIAL8 primary key,
-  genre VARCHAR(255) NOT NULL,
+  type VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE albums (
   id SERIAL8 primary key,
   title VARCHAR(255) NOT NULL,
-  genre VARCHAR(255) references genre(genre),
+  genre_id INT8 references genres(id),
   artist_id INT8 references artists(id),
   price SERIAL8
 );
-

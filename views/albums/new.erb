@@ -28,9 +28,14 @@
 </p>
 
 <p>
+  Select a genre:
   <label>
-    Genre: 
-    <input type="text"  name="genre"/>
+    <select name="genre_id">
+    <option disabled selected>select..</option>
+      <% for genre in @genres %>
+      <option value="<%= genre.id %>"><%= genre.type %></option>
+      <% end %>
+    </select>
   </label>
 </p>
 <p>

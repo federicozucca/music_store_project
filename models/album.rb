@@ -1,22 +1,23 @@
 require('pg')
 require_relative('../db/sql_runner')
 require_relative('artist')
+require_relative('genre')
 
 class Album
-  attr_accessor :title, :genre, :artist_id, :price 
+  attr_accessor :title, :genre_id, :artist_id, :price 
 
   attr_reader :id
 
   def initialize( options )
     @title = options['title']
-    @genre = options['genre']
+    @genre_id = options['genre_id']
     @id = options['id'].to_i if options['id']
     @artist_id = options['artist_id']
     @price = options['price'].to_i
   end
 
   def save()
-    sql = "INSERT INTO albums (title, genre, artist_id, price) VALUES ('#{@title}', '#{@genre}', #{@artist_id}, #{@price}) returning *;"
+    sql = "INSERT INTO albums (title, genre_id, artist_id, price) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}) returning *;"
     result = SqlRunner.run( sql )
     @id = result[0]['id'].to_i
   end
@@ -30,7 +31,7 @@ class Album
   def self.update (options)
     sql = "UPDATE albums SET
           title='#{options['title']}',
-          genre='#{options['genre']}',
+          genre_id='#{options['genre_id']}',
           artist_id='#{options['artist_id']}',
           price=#{options['price']}
           WHERE id=#{options['id']}"
