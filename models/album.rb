@@ -4,7 +4,7 @@ require_relative('artist')
 require_relative('genre')
 
 class Album
-  attr_accessor :title, :genre_id, :artist_id, :price, :quantity
+  attr_accessor :title, :genre_id, :artist_id, :price, :quantity, :quantity_sold
 
   attr_reader :id
 
@@ -15,12 +15,13 @@ class Album
     @artist_id = options['artist_id']
     @price = options['price'].to_i
     @quantity= options['quantity'].to_i
+    @quantity_sold= options['quantity_sold'].to_i
   end
 
   
 
   def save()
-    sql = "INSERT INTO albums (title, genre_id, artist_id, price, quantity) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}, #{@quantity}) returning *;"
+    sql = "INSERT INTO albums (title, genre_id, artist_id, price, quantity,quantity_sold) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}, #{@quantity}, #{@quantity_sold}) returning *;"
     result = SqlRunner.run( sql )
     @id = result[0]['id'].to_i
   end
@@ -33,12 +34,13 @@ class Album
 
   def self.update (options)
     sql = "UPDATE albums SET
-          title='#{options['title']}',
-          genre_id='#{options['genre_id']}',
-          artist_id='#{options['artist_id']}',
-          price=#{options['price']}
-          quantity=#{options['quantity']}
-          WHERE id=#{options['id']}"
+    title='#{options['title']}',
+    genre_id='#{options['genre_id']}',
+    artist_id='#{options['artist_id']}',
+    price=#{options['price']},
+    quantity=#{options['quantity']},
+    quantity_sold=#{options['quantity_sold']},
+    WHERE id=#{options['id']}"
     result = SqlRunner.run( sql )
   end
 
@@ -56,41 +58,41 @@ class Album
    sql = "SELECT * FROM albums;"
    albums = SqlRunner.run( sql )
    return albums.map { |album| Album.new(album) }
-  end
+ end
 
-  def artist
-    sql = "SELECT * FROM artists WHERE id=#{@artist_id}"
-    first_artist_hash = SqlRunner.run(sql).first
-    return Artist.new(first_artist_hash)
-  end
+ def artist
+  sql = "SELECT * FROM artists WHERE id=#{@artist_id}"
+  first_artist_hash = SqlRunner.run(sql).first
+  return Artist.new(first_artist_hash)
+end
 
-  def genre
-    sql = "SELECT * FROM genres WHERE id=#{@genre_id}"
-    first_artist_hash = SqlRunner.run(sql).first
-    return Genre.new(first_artist_hash)
-  end
+def genre
+  sql = "SELECT * FROM genres WHERE id=#{@genre_id}"
+  first_artist_hash = SqlRunner.run(sql).first
+  return Genre.new(first_artist_hash)
+end
 
-  def self.find (id)
+def self.find (id)
 
-    sql = "SELECT * FROM albums WHERE id=#{id}"
-    album = SqlRunner.run(sql).first
-    return Album.new(album)
-  end
+  sql = "SELECT * FROM albums WHERE id=#{id}"
+  album = SqlRunner.run(sql).first
+  return Album.new(album)
+end
 
-  def stock_level
-    return "low" if(@quantity <= 10 && @quantity > 0);
-    return "medium" if(@quantity > 10 && @quantity <= 100);
-    return "high" if(@quantity > 100);
-    return "out of stock" if(@quantity == 0)
-  end
+def stock_level
+  return "low" if(@quantity <= 10 && @quantity > 0);
+  return "medium" if(@quantity > 10 && @quantity <= 100);
+  return "high" if(@quantity > 100);
+  return "out of stock" if(@quantity == 0)
+end
 
-  def self.count
-    albums = self.all
-    counter = 0 
-    for album in albums
-      counter += album.quantity
-    end
-    return counter
+def self.count
+  albums = self.all
+  counter = 0 
+  for album in albums
+    counter += album.quantity
   end
+  return counter
+end
 
 end
