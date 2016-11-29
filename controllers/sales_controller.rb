@@ -10,6 +10,6 @@ end
 
 post '/music/sell' do
   @album = Album.find( params[:id] )
-  @album.sellpri(params[:quantity].to_i)
+  @album.sell(params[:quantity].to_i)
 redirect to("/music/inventory")
 end

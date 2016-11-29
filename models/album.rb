@@ -107,10 +107,33 @@ end
 
 def sell(albums_sold) 
   @quantity -= albums_sold 
-  sql = "UPDATE albums
+  sql1 = "UPDATE albums
         SET quantity=#{@quantity}
         WHERE id=#{@id}; "
-  SqlRunner.run(sql)
+  @quantity_sold += albums_sold
+  sql2 = "UPDATE albums
+        SET quantity_sold=#{@quantity_sold}
+        WHERE id=#{@id}; "
+  SqlRunner.run(sql1)
+  SqlRunner.run(sql2)
+end
+
+def self.capital_invested
+    albums = self.all
+    counter = 0 
+    for album in albums
+      counter += album.quantity*album.price
+    end
+    return counter
+end
+
+def self.capital_earned
+    albums = self.all
+    counter = 0 
+    for album in albums
+      counter += album.quantity_sold*album.price_sold
+    end
+    return counter
 end
 
 

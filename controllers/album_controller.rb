@@ -55,5 +55,13 @@ end
  redirect to("/music/albums/#{params[:id]}")
  end
 
+ #show the edit album form
+ get '/music/sales' do
+   @genres = Genre.all()
+   @artists = Artist.all()
+   @album = Album.all()
+ erb(:"albums/sales")
+ end
+
 
 

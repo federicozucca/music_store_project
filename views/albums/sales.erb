@@ -1,0 +1,12 @@
+<h1>Report</h1>
+
+<h2>
+<hr/>
+At the moment:  
+<li><p>You own <%= Album.count%> Albums <%= Artist.count%> and
+Artists</p></li>
+<li><p>You invested: <%= Album.capital_invested %> £ </p></li>
+<li><p>You earned: <%= Album.capital_earned %> £ </p></li>
+<li><p>Your profit is: <%= Album.capital_earned - Album.capital_invested %> £</p></li>
+</h2>
+<hr/>
