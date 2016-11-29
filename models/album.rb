@@ -87,10 +87,10 @@ class Album
   def self.count
     albums = self.all
     counter = 0 
-      for album in albums
+    for album in albums
       counter += album.quantity
-      end
-      return counter
-   end
+    end
+    return counter
+  end
 
 end
