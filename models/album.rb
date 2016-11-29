@@ -39,7 +39,7 @@ class Album
     artist_id='#{options['artist_id']}',
     price=#{options['price']},
     quantity=#{options['quantity']},
-    quantity_sold=#{options['quantity_sold']},
+    quantity_sold=#{options['quantity_sold']}
     WHERE id=#{options['id']}"
     result = SqlRunner.run( sql )
   end
