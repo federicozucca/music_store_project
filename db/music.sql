@@ -19,6 +19,7 @@ CREATE TABLE albums (
   genre_id INT8 references genres(id),
   artist_id INT8 references artists(id),
   price SERIAL8,
+  price_sold SERIAL8,
   quantity SERIAL8,
   quantity_sold SERIAL8
 );

@@ -4,7 +4,7 @@ require_relative('artist')
 require_relative('genre')
 
 class Album
-  attr_accessor :title, :genre_id, :artist_id, :price, :quantity, :quantity_sold
+  attr_accessor :title, :genre_id, :artist_id, :price, :price_sold, :quantity, :quantity_sold
 
   attr_reader :id
 
@@ -14,6 +14,7 @@ class Album
     @id = options['id'].to_i if options['id']
     @artist_id = options['artist_id']
     @price = options['price'].to_i
+    @price_sold = options['price_sold'].to_i
     @quantity= options['quantity'].to_i
     @quantity_sold= options['quantity_sold'].to_i
   end
@@ -21,7 +22,7 @@ class Album
   
 
   def save()
-    sql = "INSERT INTO albums (title, genre_id, artist_id, price, quantity,quantity_sold) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}, #{@quantity}, #{@quantity_sold}) returning *;"
+    sql = "INSERT INTO albums (title, genre_id, artist_id, price, price_sold quantity,quantity_sold) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}, #{@price_sold} #{@quantity}, #{@quantity_sold}) returning *;"
     result = SqlRunner.run( sql )
     @id = result[0]['id'].to_i
   end
@@ -38,6 +39,7 @@ class Album
     genre_id='#{options['genre_id']}',
     artist_id='#{options['artist_id']}',
     price=#{options['price']},
+    price_sold=#{options['price_sold']},
     quantity=#{options['quantity']},
     quantity_sold=#{options['quantity_sold']}
     WHERE id=#{options['id']}"
@@ -109,10 +111,6 @@ def sell(albums_sold)
         SET quantity=#{@quantity}
         WHERE id=#{@id}; "
   SqlRunner.run(sql)
-end
-
-def 
-
 end
 
 
