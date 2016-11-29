@@ -105,7 +105,7 @@ def buy(albums_bought)
   SqlRunner.run(sql)
 end
 
-def sell(albums_sold) 
+def sell(albums_sold)
   @quantity -= albums_sold 
   sql1 = "UPDATE albums
         SET quantity=#{@quantity}
