@@ -95,4 +95,20 @@ def self.count
   return counter
 end
 
+def buy(albums_bought) 
+  @quantity += albums_bought 
+  sql = "UPDATE albums
+        SET quantity=#{@quantity}
+        WHERE id=#{@id}; "
+  SqlRunner.run(sql)
+end
+
+def sell(albums_sold) 
+  @quantity -= albums_sold 
+  sql = "UPDATE albums
+        SET quantity=#{@quantity}
+        WHERE id=#{@id}; "
+  SqlRunner.run(sql)
+end
+
 end
