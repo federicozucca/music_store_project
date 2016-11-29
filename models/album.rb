@@ -84,5 +84,13 @@ class Album
     return "out of stock" if(@quantity == 0)
   end
 
+  def self.count
+    albums = self.all
+    counter = 0 
+      for album in albums
+      counter += album.quantity
+      end
+      return counter
+   end
 
 end

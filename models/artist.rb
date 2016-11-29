@@ -62,4 +62,10 @@ class Artist
     return Artist.new(artist)
   end
 
+  def self.count
+    artists = self.all
+    return artists.length
+    
+   end
+
 end
