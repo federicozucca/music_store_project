@@ -9,6 +9,7 @@
   <th>Genre</th>
   <th>Price</th>
   <th>Quantity</th>
+  <th>SOLD</th>
   <th>Stock Level</th>
 </tr>
 
@@ -19,6 +20,7 @@
   <td><%= album.genre.type %></td>
   <td><%= album.price()  %></td>
   <td><%= album.quantity()  %></td>
+  <td><%= album.quantity_sold()  %></td>
   <td class="<%= album.stock_level.downcase %>">Stock Level: <%= album.stock_level  %></td>
   </tr>
 <%end%>
