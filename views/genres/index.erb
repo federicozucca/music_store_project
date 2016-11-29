@@ -1,18 +1,25 @@
 <h1>Genres present in our inventory</h1>
 <hr/>
-<a href="/music/genres/new">Add a NEW Genre</a>
+<a href="/music/genres/new" class = "btn">Add a NEW Genre</a>
 <hr/>#
+
+<table>
+<caption>All the Artist</caption>
+
+<tr>
+  <th>Type:</th>
+  <th>Details</th>
+</tr>
 <% for genre in @genres %>
-<p>Type: <%= genre.type()  %></p>
-
-<form action="/music/genres/<%= genre.id  %>" method="get">
+<tr> 
+  <td><%= genre.type()  %></td>
+  <td><form action="/music/genres/<%= genre.id  %>" method="get">
 <input type="submit" value="Show details" />
-</form>
-<hr/>
-
-
+</form></td>
+  </tr>
 <%end%>
-
+  
+</table>
 
 
 
