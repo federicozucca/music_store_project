@@ -1,4 +1,3 @@
-
 <h1>Welcome Jeff, how may I help you today?</h1>
 
 <h2>
@@ -7,9 +6,54 @@ At the moment you have:
 <p>Albums:   <%= Album.count%></p>
 <p>Artists: <%= Artist.count%> </p>
 <p>Profit: xxx </p>
+</h2>
 <hr/>
-<h2>
+<h3>Stock Arrived</h3>
 
+<form action="/music/buy" method="post">
 
+<p>
+  Select an album:
+  <label>
+    <select name="id">
+    <option disabled selected>select..</option>
+      <% for album in @albums %>
+      <option value="<%= album.id %>"><%= album.title %></option>
+      <% end %>
+    </select>
+  </label>
+  <label>
+    Quantity: 
+    <input type="number"  name="quantity" min="0"/>
+  </label>
 
+  <input type="submit" value="Stock Arrived"/>
+</p>
+</form>
 
+<hr/>
+
+<h3>Albums sold</h3>
+
+<form action="/music/sell" method="post">
+
+<p>
+  Select an album:
+  <label>
+    <select name="id">
+    <option disabled selected>select..</option>
+      <% for album in @albums %>
+      <option value="<%= album.id %>"><%= album.title %></option>
+      <% end %>
+    </select>
+  </label>
+  <label>
+    Quantity: 
+    <input type="number"  name="quantity" min="0"/>
+  </label>
+
+  <input type="submit" value="Update"/>
+</p>
+</form>
+
+<hr/>

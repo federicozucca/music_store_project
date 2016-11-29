@@ -7,5 +7,6 @@ require_relative('controllers/inventory_controller')
 require_relative('controllers/other_functions_controller')
 
 get '/music' do
-  erb( :index )
+  @albums  = Album.all
+    erb( :index )
 end

@@ -32,6 +32,13 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    color: orange;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    text-align: left;
+}
+
 ul {
   padding: 0px;
   margin: 0px;
