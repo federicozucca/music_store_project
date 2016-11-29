@@ -55,19 +55,5 @@ end
  redirect to("/music/albums/#{params[:id]}")
  end
 
-#add stock 
 
-post '/music/buy' do
-  @album = Album.find( params[:id] )
-  @album.buy(params[:quantity].to_i)
-redirect to("/music/inventory")
-end
-
-#stock 
-
-post '/music/sell' do
-  @album = Album.find( params[:id] )
-  @album.sellpri(params[:quantity].to_i)
-redirect to("/music/inventory")
-end
 
