@@ -22,7 +22,7 @@ class Album
   
 
   def save()
-    sql = "INSERT INTO albums (title, genre_id, artist_id, price, price_sold quantity,quantity_sold) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}, #{@price_sold} #{@quantity}, #{@quantity_sold}) returning *;"
+    sql = "INSERT INTO albums (title, genre_id, artist_id, price, price_sold, quantity,quantity_sold) VALUES ('#{@title}', '#{@genre_id}', #{@artist_id}, #{@price}, #{@price_sold}, #{@quantity}, #{@quantity_sold}) returning *;"
     result = SqlRunner.run( sql )
     @id = result[0]['id'].to_i
   end

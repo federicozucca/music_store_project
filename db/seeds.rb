@@ -79,7 +79,8 @@ album1 = Album.new({
   'title' => 'Back in black',
   'genre_id' => genre1.id,
   'artist_id' => artist1.id,
-  'price' => 30,
+  'price' => 10,
+  'price_sold' => 30,
   'quantity' => 200,
   'quantity_sold' => 0
   })
@@ -91,6 +92,7 @@ album2 = Album.new({
   'genre_id' => genre1.id,
   'artist_id' => artist1.id,
   'price' => 20,
+  'price_sold' => 40,
   'quantity' => 100,
   'quantity_sold' => 0
   })
@@ -101,7 +103,8 @@ album3 = Album.new({
   'title' => 'G N R Lies',
   'genre_id' => genre1.id,
   'artist_id' => artist2.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 30,
   'quantity' => 150,
   'quantity_sold' => 0
   })
@@ -112,7 +115,8 @@ album4 = Album.new({
   'title' => 'All Killer No Filler',
   'genre_id' => genre2.id,
   'artist_id' => artist2.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 30,
   'quantity' => 20,
   'quantity_sold' => 0
   })
@@ -123,7 +127,8 @@ album5 = Album.new({
   'title' => 'G N R Lies',
   'genre_id' => genre1.id,
   'artist_id' => artist6.id,
-  'price' => 20,
+  'price' => 15,
+  'price_sold' => 30,
   'quantity' => 180,
   'quantity_sold' => 0
   })
@@ -134,7 +139,8 @@ album6 = Album.new({
   'title' => 'Californication',
   'genre_id' => genre1.id,
   'artist_id' => artist4.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 30,
   'quantity' => 210,
   'quantity_sold' => 0
   })
@@ -145,7 +151,8 @@ album6 = Album.new({
   'title' => 'By the Way',
   'genre_id' => genre1.id,
   'artist_id' => artist4.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 35,
   'quantity' => 180,
   'quantity_sold' => 0
   })
@@ -156,7 +163,8 @@ album7 = Album.new({
   'title' => 'Help!',
   'genre_id' => genre1.id,
   'artist_id' => artist5.id,
-  'price' => 20,
+  'price' => 5,
+  'price_sold' => 20,
   'quantity' => 300,
   'quantity_sold' => 0
   })
@@ -167,7 +175,8 @@ album8 = Album.new({
   'title' => 'The Beatles',
   'genre_id' => genre3.id,
   'artist_id' => artist5.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 40,
   'quantity' => 500,
   'quantity_sold' => 0
   })
@@ -178,7 +187,8 @@ album9 = Album.new({
   'title' => 'Abbey Road',
   'genre_id' => genre3.id,
   'artist_id' => artist5.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 35,
   'quantity' => 260,
   'quantity_sold' => 0
   })
@@ -189,7 +199,8 @@ album10 = Album.new({
   'title' => 'The Offspring',
   'genre_id' => genre1.id,
   'artist_id' => artist3.id,
-  'price' => 20,
+  'price' => 15,
+  'price_sold' => 30,
   'quantity' => 300,
   'quantity_sold' => 0
   })
@@ -200,7 +211,8 @@ album11 = Album.new({
   'title' => 'Like a virgin',
   'genre_id' => genre4.id,
   'artist_id' => artist7.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 30,
   'quantity' => 100,
   'quantity_sold' => 0
   })
@@ -211,7 +223,8 @@ album12 = Album.new({
   'title' => 'Like a prayer',
   'genre_id' => genre4.id,
   'artist_id' => artist7.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 30,
   'quantity' => 80,
   'quantity_sold' => 0
   })
@@ -222,7 +235,8 @@ album13 = Album.new({
   'title' => 'Symphony 9',
   'genre_id' => genre5.id,
   'artist_id' => artist8.id,
-  'price' => 20,
+  'price' => 10,
+  'price_sold' => 30,
   'quantity' => 210,
   'quantity_sold' => 0
   })
