@@ -12,6 +12,7 @@
   <th>Artist</th>
   <th>Genre</th>
   <th>Price</th>
+  <th>Details</th>
 </tr>
 
 <% for album in @albums %>
@@ -20,6 +21,9 @@
   <td><a href="/music/artists/<%= album.artist_id  %>"><%=album.artist.name %></a></td>
   <td><%= album.genre.type %></td>
   <td><%= album.price()  %></td>
+  <td><form action="/music/albums/<%= album.id  %>" method="get">
+<input type="submit" value="Show details" />
+</form></td>
   </tr>
 <%end%>
   

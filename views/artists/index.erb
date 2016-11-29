@@ -1,18 +1,26 @@
 <h1>Artists present in our inventory</h1>
 <hr/>
 <a href="/music/artists/new" class="btn">Add a NEW Artist</a>
-<hr/>#
-<% for artist in @artists %>
-<p>Name: <%= artist.name()  %></p>
-
-<form action="/music/artists/<%= artist.id  %>" method="get">
-<input type="submit" value="Show details" />
-</form>
 <hr/>
 
+<table>
+<caption>All the Artist</caption>
 
+<tr>
+  <th>Name</th>
+  <th>Details</th>
+</tr>
+
+<% for artist in @artists %>
+<tr> 
+  <td><%= artist.name()  %></td>
+  <td><form action="/music/artists/<%= artist.id  %>" method="get">
+<input type="submit" value="Show details" />
+</form></td>
+  </tr>
 <%end%>
-
+  
+</table>
 
 
 

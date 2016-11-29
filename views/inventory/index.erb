@@ -1,5 +1,52 @@
 <h1>All the Albums</h1>
 
+<form action="/music/albums" method="post">
+<p>
+  Select a title:
+  <label>
+    <select name="title">
+    <option disabled selected>select..</option>
+      <% for album in @albums %>
+      <option value="<%= album.title %>"><%= album.title %></option>
+      <% end %>
+    </select>
+  </label>
+</p>
+
+<p>
+  Select an artist:
+  <label>
+    <select name="artist_id">
+    <option disabled selected>select..</option>
+      <% for artist in @artists %>
+      <option value="<%= artist.id %>"><%= artist.name %></option>
+      <% end %>
+    </select>
+  </label>
+</p>
+
+<p>
+  Select a genre:
+  <label>
+    <select name="genre_id">
+    <option disabled selected>select..</option>
+      <% for genre in @genres %>
+      <option value="<%= genre.id %>"><%= genre.type %></option>
+      <% end %>
+    </select>
+  </label>
+</p>
+
+<p>
+  <label>
+    Quantity: 
+    <input type="number"  name="quantity"/>
+  </label>
+</p>
+
+  <input type="submit" value="Add"/>
+
+</form>
 <table>
 <caption>Inventory</caption>
 
