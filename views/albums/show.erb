@@ -3,7 +3,8 @@
 <p>Artist: <%= @album.artist.name %></p>
 <p>Genre: <%= @album.genre.type %></p>
 <p>ID: <%= @album.id %></p>
-<p>Price: <%= @album.price %></p>
+<p>Purchase Price: <%= @album.price %></p>
+<p>Selling Price: <%= @album.price_sold %></p>
   <p>
     <a href="/music/albums/<%= @album.id %>/edit" class="btn">Edit</a>
     </p>

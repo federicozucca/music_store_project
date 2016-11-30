@@ -7,8 +7,8 @@
   <th>Title</th>
   <th>Artist</th>
   <th>Genre</th>
-  <th>Buy Price</th>
-  <th>Sold Price</th>
+  <th>Purchase Price</th>
+  <th>Selling Price</th>
   <th>Quantity</th>
   <th>Quantity Sold</th>
   <th>Stock Level</th>
@@ -23,7 +23,7 @@
   <td><%= album.price_sold()  %></td>
   <td><%= album.quantity()  %></td>
   <td><%= album.quantity_sold()  %></td>
-  <td class="<%= album.stock_level%>">Stock Level: <%= album.stock_level  %></td>
+  <td class="<%= album.stock_level%>"> <%= album.stock_level  %></td>
   </tr>
 <%end%>
   
