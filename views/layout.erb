@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Crazy Keith's Music Store</title>
-  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <body>
 
-  <link rel="icon" href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRiIZRC0Zu9naV2VWRnXIfyNN4xpXji5t5dMP0Xl_-zjwZSFw-pjVBwUCxBtQ" />
 
-  <link rel="stylesheet" type = "text/css" href="/style.css"
+    <title>Crazy Keith's Music Store</title>
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
 
-</head>
-<body>
-<main class="flex flex--start">
-  <nav>
-      <a href="/music" class="btn">Home Page</a>
-      <a href="/music/inventory" class="btn">INVENTORY</a>
-      <a href="/music/albums" class="btn">All the Albums</a>
-      <a href="/music/artists" class="btn">All the Artists</a>
-      <a href="/music/sales" class="btn">SALES</a>
-      <a href="/music/others" class="btn">Additional functions</a>
-  </nav>
-  <section id="content">
-  <%= yield %>
-  </section>
+    <link rel="icon" href="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRiIZRC0Zu9naV2VWRnXIfyNN4xpXji5t5dMP0Xl_-zjwZSFw-pjVBwUCxBtQ" />
+
+    <link rel="stylesheet" type = "text/css" href="/style.css">
+
+
+
+  </head>
+  <main class="flex flex--start">
+  <ul id="top-nav">
+      <li><a href="/music">Home</a></li>
+      <li><a href="/music/inventory">INVENTORY</a></li>
+      <li><a href="/music/albums">Albums</a></li>
+      <li><a href="/music/artists">Artists</a></li>
+      <li><a href="/music/sales">SALES</a></li>
+      <li><a href="/music/others">Genres</a></li>
+    </ul>
+    <section id="content">
+      <%= yield %>
+    </section>
   </main>
 </body>
+</head>
 </html>

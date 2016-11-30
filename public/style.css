@@ -1,7 +1,11 @@
 body {
-  background-image: url("https://itsasmallweb.files.wordpress.com/2011/05/vinyl_1680.jpg")
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/115/312/original/free-music-background-vector.jpg");
+  background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-position: center; 
 
 }
+
 
 .low {
   color: red;
@@ -21,6 +25,7 @@ h1 {
   color: orange;
   font-size: 50px;
   text-align: center;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 h2 {
@@ -28,36 +33,15 @@ h2 {
     font-family: 'Orbitron', sans-serif;
     font-size: 35px;
     text-align: center;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 h3 {
-    color: orange;
+    color: red;
     font-family: 'Orbitron', sans-serif;
     font-size: 15px;
     text-align: left;
-}
-
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    width: 60px;
-} 
-
-ul li a {
-  text-decoration: none;
-  color: white;
-}
-
-ul li{
-  float:left;
-  width: 100px;
-  height: 40px;
-  background-color: orange;
-  color:white;
-  font-size: 20px;
-  line-height: 50px;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 
 .active {
@@ -69,14 +53,14 @@ table {
   border-collapse: collapse;
   width: 70%;
   margin: auto;
-  color: orange;
   background-color: #FFF
   padding: 1em 1.5em 2em 1.5em}
 
 th {
   padding: 0.5em 0 0.5em;
   font-weight: bold;
-  background-color: #FFC;
+  background-color: red;
+  color: black;
   border-top:1px solid #FB7A31;
   border-bottom:1px solid #FB7A31;
 }
@@ -85,9 +69,29 @@ td {
 
   padding: 0.5em 0 0.5em;
   text-align: center;
-border-top:1px solid #CCC;
-border-bottom:1px solid #CCC}
+  color: white;
+  border-top:1px solid #CCC;
+  border-bottom:1px solid #CCC;
+  background-color: rgba(255, 0, 0, 0.4);
+}
 
+#nav {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  background-color: blue;
+}
+
+
+#nav h4 {
+  float:left;
+  font-size: 2em;
+}
+
+a{
+  text-decoration: none;
+   color:white;
+}
 
 
 caption {font-size: 20px;
@@ -97,32 +101,68 @@ p {
     color: white;
     font-family: comic;
     font-size: 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
 .btn {
-  background: #ff6f00;
-  background-image: -webkit-linear-gradient(top, #ff6f00, #ffe45c);
-  background-image: -moz-linear-gradient(top, #ff6f00, #ffe45c);
-  background-image: -ms-linear-gradient(top, #ff6f00, #ffe45c);
-  background-image: -o-linear-gradient(top, #ff6f00, #ffe45c);
-  background-image: linear-gradient(to bottom, #ff6f00, #ffe45c);
+  background: #ff9524;
+  background-image: -webkit-linear-gradient(top, #ff9524, #ff0000);
+  background-image: -moz-linear-gradient(top, #ff9524, #ff0000);
+  background-image: -ms-linear-gradient(top, #ff9524, #ff0000);
+  background-image: -o-linear-gradient(top, #ff9524, #ff0000);
+  background-image: linear-gradient(to bottom, #ff9524, #ff0000);
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;
-  font-family: Arial;
-  color: #00002e;
-  font-size: 14px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 11px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
 
 .btn:hover {
-  background: #3cb0fd;
-  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
-  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  background: #f7ff00;
+  background-image: -webkit-linear-gradient(top, #f7ff00, #ffa200);
+  background-image: -moz-linear-gradient(top, #f7ff00, #ffa200);
+  background-image: -ms-linear-gradient(top, #f7ff00, #ffa200);
+  background-image: -o-linear-gradient(top, #f7ff00, #ffa200);
+  background-image: linear-gradient(to bottom, #f7ff00, #ffa200);
   text-decoration: none;
 }
 
+ul{
+  list-style-type:none;
+  margin: 0px;
+  padding: 0px;
+}
+
+ul li a { 
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+#top-nav {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#top-nav li {
+  display: inline-block;
+}
+
+#top-nav li {
+  padding: 10px;
+  background-color: black;
+  font-size: 20px;
+  text-align: center;
+  opacity: .8;
+}
+
+#top-nav {
+  width: 100%;
+}
+
+ul li a:hover{
+  background-color: orange;
+}
