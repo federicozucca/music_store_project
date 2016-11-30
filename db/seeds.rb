@@ -90,7 +90,7 @@ album1 = Album.new({
   'price' => 10,
   'price_sold' => 30,
   'quantity' => 200,
-  'quantity_sold' => 0
+  'quantity_sold' => 120
   })
 
 album1.save
@@ -102,7 +102,7 @@ album2 = Album.new({
   'price' => 20,
   'price_sold' => 40,
   'quantity' => 100,
-  'quantity_sold' => 0
+  'quantity_sold' => 20
   })
 
 album2.save
@@ -114,7 +114,7 @@ album3 = Album.new({
   'price' => 10,
   'price_sold' => 30,
   'quantity' => 150,
-  'quantity_sold' => 0
+  'quantity_sold' => 10
   })
 
 album3.save
@@ -126,7 +126,7 @@ album4 = Album.new({
   'price' => 10,
   'price_sold' => 30,
   'quantity' => 20,
-  'quantity_sold' => 0
+  'quantity_sold' => 40
   })
 
 album4.save
@@ -138,7 +138,7 @@ album5 = Album.new({
   'price' => 15,
   'price_sold' => 30,
   'quantity' => 180,
-  'quantity_sold' => 0
+  'quantity_sold' => 20
   })
 
 album5.save
@@ -150,7 +150,7 @@ album6 = Album.new({
   'price' => 10,
   'price_sold' => 30,
   'quantity' => 210,
-  'quantity_sold' => 0
+  'quantity_sold' => 10
   })
 
 album6.save
@@ -162,7 +162,7 @@ album6 = Album.new({
   'price' => 10,
   'price_sold' => 35,
   'quantity' => 180,
-  'quantity_sold' => 0
+  'quantity_sold' => 50
   })
 
 album6.save
@@ -174,7 +174,7 @@ album7 = Album.new({
   'price' => 5,
   'price_sold' => 20,
   'quantity' => 300,
-  'quantity_sold' => 0
+  'quantity_sold' => 20
   })
 
 album7.save
@@ -186,7 +186,7 @@ album8 = Album.new({
   'price' => 10,
   'price_sold' => 40,
   'quantity' => 500,
-  'quantity_sold' => 0
+  'quantity_sold' => 300
   })
 
 album8.save
@@ -198,7 +198,7 @@ album9 = Album.new({
   'price' => 10,
   'price_sold' => 35,
   'quantity' => 260,
-  'quantity_sold' => 0
+  'quantity_sold' => 120
   })
 
 album9.save
@@ -210,7 +210,7 @@ album10 = Album.new({
   'price' => 15,
   'price_sold' => 30,
   'quantity' => 300,
-  'quantity_sold' => 0
+  'quantity_sold' => 130
   })
 
 album10.save
@@ -222,7 +222,7 @@ album11 = Album.new({
   'price' => 10,
   'price_sold' => 30,
   'quantity' => 100,
-  'quantity_sold' => 0
+  'quantity_sold' => 20
   })
 
 album11.save 
@@ -234,7 +234,7 @@ album12 = Album.new({
   'price' => 10,
   'price_sold' => 30,
   'quantity' => 80,
-  'quantity_sold' => 0
+  'quantity_sold' => 1
   })
 
 album12.save
@@ -246,7 +246,7 @@ album13 = Album.new({
   'price' => 10,
   'price_sold' => 30,
   'quantity' => 210,
-  'quantity_sold' => 0
+  'quantity_sold' => 20
   })
 
 album13.save
