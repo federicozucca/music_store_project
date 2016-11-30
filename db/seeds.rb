@@ -11,42 +11,50 @@ Artist.delete_all
 
 
 artist1 = Artist.new({
-  'name' => "ACDC"})
+  'name' => "ACDC",
+  'logo' => "http://cdn.redmondpie.com/wp-content/uploads/2012/11/AC_DC_logo.jpg"})
 
 artist1.save
 
 artist2 = Artist.new({
-  'name' => "Guns and Roses"})
+  'name' => "Guns and Roses",
+  'logo' => "http://synduimages.synduweb.netdna-cdn.com/uploads/513bcccdea78c/voice_inline/a8f486df-1c4d-5c31-0ad7-8bbf490d1808/5683b2d290c5c.png"})
 
 artist2.save
 
 artist3 = Artist.new({
-  'name' => "The Offspring"})
+  'name' => "The Offspring",
+  'logo' => "https://pbs.twimg.com/profile_images/690269820109991936/5tATnKU8.jpg"})
 
 artist3.save
 
 artist4 = Artist.new({
-  'name' => "Red Hot Chili Peppers"})
+  'name' => "Red Hot Chili Peppers",
+  'logo' => "http://i.onionstatic.com/avclub/5794/45/16x9/960.jpg"})
 
 artist4.save
 
 artist5 = Artist.new({
-  'name' => "The Beatles"})
+  'name' => "The Beatles",
+  'logo' => "http://img11.deviantart.net/65e5/i/2011/270/b/5/the_beatles_logo_by_w00den_sp00n-d4b5k3h.jpg"})
 
 artist5.save
 
 artist6 = Artist.new({
-  'name' => "Sum 41"})
+  'name' => "Sum 41",
+  'logo' => "http://wallpapercave.com/wp/nRMUMdb.jpg"})
 
 artist6.save
 
 artist7 = Artist.new({
-  'name' => "Madonna"})
+  'name' => "Madonna",
+  'logo' => "http://divinamadonna.com/wp-content/themes/DivinaMadonna/images/logo.png"})
 
 artist7.save
 
 artist8 = Artist.new({
-  'name' => "Ludwig Van Beethoven "})
+  'name' => "Ludwig Van Beethoven ",
+  'logo' => "http://assets.classicfm.com/2009/04/ludwig-van-beethoven-1233160023.jpg"})
 
 artist8.save
 

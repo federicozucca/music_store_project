@@ -4,15 +4,16 @@ require_relative('album')
 
 class Artist
   attr_accessor :name
-  attr_reader :id
+  attr_reader :id, :logo
 
   def initialize(options)
     @name = options['name']
-    @id = options['id'].to_i if options['id'] 
+    @id = options['id'].to_i if options['id']
+    @logo = options['logo'] 
   end
 
   def save()
-    sql = "INSERT INTO artists (name) VALUES ('#{@name}') returning *;"
+    sql = "INSERT INTO artists (name,logo) VALUES ('#{@name}','#{ @logo }') returning *;"
     result = SqlRunner.run( sql )
     @id = result[0]['id'].to_i
 
@@ -27,6 +28,7 @@ class Artist
   def self.update (options)
    sql = "UPDATE artists SET
          name='#{options['name']}'
+         logo='#{options['logo']}'
          WHERE id=#{options['id']}"
     result = SqlRunner.run( sql )
   end
