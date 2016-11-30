@@ -5,7 +5,7 @@
 At the moment you have:  
 <p>Albums:   <%= Album.count%></p>
 <p>Artists: <%= Artist.count%> </p>
-<p>Profit: xxx </p>
+<p>Profit: <%= Album.capital_earned - Album.capital_invested %> £ </p>
 </h2>
 <hr/>
 <h3>Stock Arrived</h3>
