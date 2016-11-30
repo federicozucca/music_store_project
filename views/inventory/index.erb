@@ -18,7 +18,7 @@
 <tr> 
   <td><a href="/music/albums/<%= album.id  %>"><%=album.title %></a></td></td>
   <td><a href="/music/artists/<%= album.artist_id  %>"><%=album.artist.name %></a></td>
-  <td><%= album.genre.type %></td>
+  <td><a href="/music/genres/<%= album.genre_id  %>"><%=album.genre.type %></a></td>
   <td><%= album.price()  %></td>
   <td><%= album.price_sold()  %></td>
   <td><%= album.quantity()  %></td>
