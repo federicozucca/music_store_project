@@ -94,8 +94,12 @@ a{
 }
 
 
-caption {font-size: 20px;
-  font-weight: bold;}
+caption {
+  font-size: 20px;
+  font-weight: bold;color: white;
+  font-family: comic;
+  font-size: 20px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;}
 
 p {
     color: white;
@@ -103,6 +107,7 @@ p {
     font-size: 20px;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
 .btn {
   background: #ff9524;
   background-image: -webkit-linear-gradient(top, #ff9524, #ff0000);
@@ -117,10 +122,39 @@ p {
   color: #ffffff;
   font-size: 11px;
   padding: 10px 20px 10px 20px;
+  border: solid #000000 2px;
   text-decoration: none;
 }
 
 .btn:hover {
+  background: #f7ff00;
+  background-image: -webkit-linear-gradient(top, #f7ff00, #ffa200);
+  background-image: -moz-linear-gradient(top, #f7ff00, #ffa200);
+  background-image: -ms-linear-gradient(top, #f7ff00, #ffa200);
+  background-image: -o-linear-gradient(top, #f7ff00, #ffa200);
+  background-image: linear-gradient(to bottom, #f7ff00, #ffa200);
+  text-decoration: none;
+}
+
+.btn1 {
+  background: #ff9524;
+  background-image: -webkit-linear-gradient(top, #ff9524, #ff0000);
+  background-image: -moz-linear-gradient(top, #ff9524, #ff0000);
+  background-image: -ms-linear-gradient(top, #ff9524, #ff0000);
+  background-image: -o-linear-gradient(top, #ff9524, #ff0000);
+  background-image: linear-gradient(to bottom, #ff9524, #ff0000);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Courier New;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 10px 20px 10px 20px;
+  border: solid #000000 2px;
+  text-decoration: none;
+}
+
+.btn1:hover {
   background: #f7ff00;
   background-image: -webkit-linear-gradient(top, #f7ff00, #ffa200);
   background-image: -moz-linear-gradient(top, #f7ff00, #ffa200);
@@ -151,18 +185,23 @@ ul li a {
   display: inline-block;
 }
 
-#top-nav li {
+#top-nav {
+  width: 100%;
+}
+
+#top-nav a {
   padding: 10px;
+  display:block;
   background-color: black;
   font-size: 20px;
   text-align: center;
   opacity: .8;
 }
 
-#top-nav {
-  width: 100%;
+#top-nav a:hover{
+  background-color: orange;
 }
 
-ul li a:hover{
-  background-color: orange;
+#add_new_btn { 
+  text-align: center;
 }
