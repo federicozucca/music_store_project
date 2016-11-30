@@ -1,5 +1,12 @@
 <h1> Genre Details </h1>
 <p>Type: <%= @genre.type()  %></p>
+<hr/>
+<p><% counter =0 %></p>
+<p><% while counter < @genre.albums.size do %></p>
+<p>Albums: <%= @genre.albums[counter].title %></p>
+<p><% counter += 1 %></p>
+<p><% end %></p>
+
 
     <a href="/music/genres/<%= @genre.id %>/edit" class = "btn">Edit</a>
     </p>

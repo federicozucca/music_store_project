@@ -132,7 +132,7 @@ album4 = Album.new({
 album4.save
 
 album5 = Album.new({
-  'title' => 'G N R Lies',
+  'title' => 'All Killer No Filler',
   'genre_id' => genre1.id,
   'artist_id' => artist6.id,
   'price' => 15,
